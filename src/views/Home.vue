@@ -203,6 +203,7 @@ export default {
       let mes = String(fecha.getMonth() + 1).padStart(2, "0");
       let ano = fecha.getFullYear();
       let url = "";
+      let apiKey = "<ESCRIBIR API KEY>";
       if (moneda == "euro") {
         url =
           "https://api.sbif.cl/api-sbifv3/recursos_api/euro/" +
@@ -211,7 +212,9 @@ export default {
           mes +
           "/dias/" +
           dia +
-          "?apikey=81f49f3da8f835cf5702e64373f5c9c0aa271399&formato=json";
+          "?apikey=" +
+          apiKey +
+          "&formato=json";
       }
       if (moneda == "dolar") {
         url =
